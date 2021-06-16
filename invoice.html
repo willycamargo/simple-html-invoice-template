@@ -2,19 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>A simple, clean, and responsive HTML invoice template</title>
+		<title>HTML invoice template</title>
 
 		<style>
 			.invoice-box {
-				max-width: 800px;
+				box-sizing: border-box;
+				width: 100%;
+				max-width: calc(210px*4);
 				margin: auto;
 				padding: 30px;
-				border: 1px solid #eee;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-				font-size: 16px;
+				font-size: 20px;
 				line-height: 24px;
 				font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 				color: #555;
+				border: 1px solid rgb(139, 139, 139);
 			}
 
 			.invoice-box table {
@@ -24,7 +25,7 @@
 			}
 
 			.invoice-box table td {
-				padding: 5px;
+				padding: 1rem 0.5rem;
 				vertical-align: top;
 			}
 
@@ -37,8 +38,8 @@
 			}
 
 			.invoice-box table tr.top table td.title {
-				font-size: 45px;
-				line-height: 45px;
+				font-size: 2.75em;
+				line-height: 2.75em;
 				color: #333;
 			}
 
@@ -47,7 +48,7 @@
 			}
 
 			.invoice-box table tr.heading td {
-				background: #eee;
+				background: #dadada;
 				border-bottom: 1px solid #ddd;
 				font-weight: bold;
 			}
@@ -96,30 +97,38 @@
 			.invoice-box.rtl table tr td:nth-child(2) {
 				text-align: left;
 			}
+
+			.download-button {
+				display: block;
+				cursor: pointer;
+				margin: 1rem auto;
+				padding: 1rem 2rem;
+				border: 1px solid rgb(139, 139, 139);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+			}
 		</style>
 	</head>
 
 	<body>
-		<div class="invoice-box">
+		<div id="invoice" class="invoice-box">
 			<table cellpadding="0" cellspacing="0">
 				<tr class="top">
 					<td colspan="2">
 						<table>
 							<tr>
 								<td class="title">
-									<img src="https://www.sparksuite.com/images/logo.png" style="width: 100%; max-width: 300px" />
 								</td>
-
+		
 								<td>
-									Invoice #: 123<br />
-									Created: January 1, 2015<br />
-									Due: February 1, 2015
+									Invoice #: 1<br />
+									Created: June 15th, 2021<br />
+									Due: July 15th, 2021
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
-
+		
 				<tr class="information">
 					<td colspan="2">
 						<table>
@@ -129,7 +138,7 @@
 									12345 Sunny Road<br />
 									Sunnyville, CA 12345
 								</td>
-
+								
 								<td>
 									Acme Corp.<br />
 									John Doe<br />
@@ -139,46 +148,34 @@
 						</table>
 					</td>
 				</tr>
-
-				<tr class="heading">
-					<td>Payment Method</td>
-
-					<td>Check #</td>
-				</tr>
-
-				<tr class="details">
-					<td>Check</td>
-
-					<td>1000</td>
-				</tr>
-
+		
 				<tr class="heading">
 					<td>Item</td>
-
+		
 					<td>Price</td>
 				</tr>
-
+		
 				<tr class="item">
 					<td>Website design</td>
-
+				
 					<td>$300.00</td>
 				</tr>
-
+				
 				<tr class="item">
 					<td>Hosting (3 months)</td>
-
+				
 					<td>$75.00</td>
 				</tr>
-
+				
 				<tr class="item last">
 					<td>Domain name (1 year)</td>
-
+				
 					<td>$10.00</td>
 				</tr>
-
+				
 				<tr class="total">
 					<td></td>
-
+				
 					<td>Total: $385.00</td>
 				</tr>
 			</table>
